@@ -6,11 +6,9 @@ import Game from './Game';
 import { BrowserRouter,Route } from "react-router-dom";
 
 ReactDOM.render(
-  <React.StrictMode>
     <BrowserRouter>
       <Route exact path="/" component={App}/>
       <Route exact path='/game' component = {Game} />
-    </BrowserRouter>
-  </React.StrictMode>,
+    </BrowserRouter>,
   document.getElementById('root')
 );
