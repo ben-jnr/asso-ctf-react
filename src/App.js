@@ -4,8 +4,57 @@ import './App.css';
 
 function App() {
   
+  const handleChange = () =>{
+    document.getElementById('AdminPanelMssg').innerText = "Admins Only! Trespassers will be seriously dealt with";
+  }
 
-  var _0x1643=['http://ec2-13-235-254-108.ap-south-1.compute.amazonaws.com/ctfgamepaneltext/','catch','innerHTML','getElementById','App','post','YES','data','innerText','You\x20really\x20an\x20Admin?\x20I\x20doubt\x20your\x20innocence','Admins\x20Only!\x20Trespassers\x20will\x20be\x20seriously\x20dealt\x20with','then','Username\x20is\x20Mandatory','log','querySelectorAll','preventDefault','value','.AdminPanelForm','AdminPanelMssg','Password\x20is\x20Mandatory'];(function(_0xd50d2c,_0x164342){var _0xfbb949=function(_0x311f95){while(--_0x311f95){_0xd50d2c['push'](_0xd50d2c['shift']());}};_0xfbb949(++_0x164342);}(_0x1643,0x9b));var _0xfbb9=function(_0xd50d2c,_0x164342){_0xd50d2c=_0xd50d2c-0x0;var _0xfbb949=_0x1643[_0xd50d2c];return _0xfbb949;};const handleChange=()=>{document[_0xfbb9('0x8')](_0xfbb9('0x3'))[_0xfbb9('0xd')]=_0xfbb9('0xf');};const handleClick=_0x521431=>{_0x521431[_0xfbb9('0x0')]();var _0x445574=document[_0xfbb9('0x13')](_0xfbb9('0x2'));if(_0x445574[0x0][_0xfbb9('0x1')]===''){document[_0xfbb9('0x8')](_0xfbb9('0x3'))[_0xfbb9('0xd')]=_0xfbb9('0x11');return;}if(_0x445574[0x1][_0xfbb9('0x1')]===''){document[_0xfbb9('0x8')](_0xfbb9('0x3'))['innerText']=_0xfbb9('0x4');return;}const _0x3bf541={'username':_0x445574[0x0][_0xfbb9('0x1')],'password':_0x445574[0x1][_0xfbb9('0x1')]};axios[_0xfbb9('0xa')](_0xfbb9('0x5'),_0x3bf541)[_0xfbb9('0x10')](_0x2c531e=>{if(_0x2c531e[_0xfbb9('0xc')]==='NO')document[_0xfbb9('0x8')](_0xfbb9('0x3'))['innerText']=_0xfbb9('0xe');else if(_0x2c531e[_0xfbb9('0xc')]===_0xfbb9('0xb')){var _0x50b422=['h','a','c','k','o','f','f','{','u','r','_','s','e','t','a','i','n','}','c','e','a','t','_','y','o','_','c','a','p','r','v','i','a','{','q','e','w','e','}','x','5','_'];var _0x171221='';var _0x37c956=0x0;for(_0x37c956=0x0;_0x37c956<=0x7;_0x37c956++)_0x171221=_0x171221+_0x50b422[_0x37c956];for(_0x37c956=0x14;_0x37c956<=0x18;_0x37c956++)_0x171221=_0x171221+_0x50b422[_0x37c956];for(_0x37c956=0x8;_0x37c956<=0xc;_0x37c956++)_0x171221=_0x171221+_0x50b422[_0x37c956];for(_0x37c956=0x1d;_0x37c956<=0x1f;_0x37c956++)_0x171221=_0x171221+_0x50b422[_0x37c956];for(_0x37c956=0x12;_0x37c956<=0x13;_0x37c956++)_0x171221=_0x171221+_0x50b422[_0x37c956];for(_0x37c956=0x19;_0x37c956<=0x1c;_0x37c956++)_0x171221=_0x171221+_0x50b422[_0x37c956];for(_0x37c956=0xd;_0x37c956<=0x11;_0x37c956++)_0x171221=_0x171221+_0x50b422[_0x37c956];document[_0xfbb9('0x8')](_0xfbb9('0x9'))[_0xfbb9('0x7')]=_0x171221;}})[_0xfbb9('0x6')](_0x5bb2f9=>{console[_0xfbb9('0x12')](_0x5bb2f9);});_0x445574[0x0]['value']='';_0x445574[0x1][_0xfbb9('0x1')]='';};
+  const handleClick = (e) =>{
+    e.preventDefault();
+    var forms = document.querySelectorAll('.AdminPanelForm');
+    if(forms[0].value === "")
+    {
+      document.getElementById('AdminPanelMssg').innerText = "Username is Mandatory";
+      return;
+    }
+    if(forms[1].value === "")
+    {
+      document.getElementById('AdminPanelMssg').innerText = "Password is Mandatory";
+      return;
+    }
+    if(forms[0].value === 'admin')
+    {
+      if(forms[1].value === 'hopeyoudebuggedme')
+      {
+        var arr = ['h','a','c','k','o','f','f','{','u','r','_','s','e','t','a','i','n','}','c','e','a','t','_','y','o','_','c','a','p','r','v','i','a','{','q','e','w','e','}','x','5','_']; 
+        var string = "";
+        var i = 0
+        for(i=0;i<=7;i++)
+          string = string + arr[i];
+          for(i=20;i<=24;i++)
+            string = string + arr[i];
+          for(i=8;i<=12;i++)
+            string = string + arr[i];
+          for(i=29;i<=31;i++)
+            string = string + arr[i];
+          for(i=18;i<=19;i++)
+            string = string + arr[i];
+          for(i=25;i<=28;i++)
+            string = string + arr[i];
+          for(i=13;i<=17;i++)
+            string = string + arr[i];
+        document.getElementById('App').innerHTML = string;
+      }
+      else{
+        document.getElementById('AdminPanelMssg').innerText = "You really an Admin? I doubt your innocence";
+      }
+    }
+    else{
+      document.getElementById('AdminPanelMssg').innerText = "You really an Admin? I doubt your innocence";
+    }  
+    forms[0].value = "";
+    forms[1].value = "";
+  }  
+
 
   return (
     <div id="App">
